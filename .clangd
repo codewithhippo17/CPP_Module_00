@@ -1,0 +1,67 @@
+CompileFlags:
+  Add: 
+    - -Wall
+    - -Wextra
+    - -Werror
+    - -std=c++98
+    - -g
+    - -isystem/usr/include
+    - -isystem/usr/local/include
+    - -isystem/usr/include/c++/11
+    - -isystem/usr/include/x86_64-linux-gnu/c++/11
+    - -D__STDC_FORMAT_MACROS
+    - -D__STDC_LIMIT_MACROS
+    - -D__STDC_CONSTANT_MACROS
+  Remove: 
+    - -W*error*
+    - -Wdeprecated*
+    - -Wmissing*
+    - -Wunused*
+    - -Wformat*
+
+Diagnostics:
+  Suppress: 
+    - "includes are not stored properly"
+    - "declaration must be enclosed within the LIBC_NAMESPACE_DECL" 
+    - "*libc*"
+    - "*LIBC_NAMESPACE*"
+    - "*__llvm_libc*"
+    - "*stored properly*"
+    - "*within 'LIBC_NAMESPACE_DECL'*"
+    - "unused parameter*"
+    - "unused variable*" 
+    - "parameter * is not used*"
+    - "variable * is not used*"
+    - "* is deprecated*"
+    - "deprecated*"
+  UnusedIncludes: None
+  MissingIncludes: None
+  ClangTidy:
+    Add: []
+    Remove:
+      - "*readability*"
+      - "*misc*"
+      - "*modernize*"
+      - "*performance*" 
+      - "*clang-analyzer*"
+      - "*cppcoreguidelines*"
+      - "*google*"
+      - "*llvm*"
+      - "*cert*"
+      - "*bugprone*"
+      - "*hicpp*"
+
+Index:
+  Background: Skip
+  StandardLibrary: No
+
+InlayHints:
+  Enabled: false
+  ParameterNames: false
+  DeducedTypes: false
+
+Hover:
+  ShowAKA: false
+
+Completion:
+  AllScopes: false
