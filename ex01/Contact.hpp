@@ -1,4 +1,3 @@
-
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
@@ -20,12 +19,8 @@ public:
                   const std::string nn, const std::string pn,
                   const std::string ds);
 
-  std::string getFirstName() const;
-  std::string getLastName() const;
-  std::string getNickName() const;
+  void displayFullContact() const;
+  void displayTableEntry(int index) const;
 };
-
-void displayFullContact();
-void displayTableEntry(int index);
 
 #endif
